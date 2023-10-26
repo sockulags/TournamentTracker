@@ -170,9 +170,9 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(762, 388);
+            button1.Location = new Point(755, 397);
             button1.Name = "button1";
-            button1.Size = new Size(124, 58);
+            button1.Size = new Size(159, 51);
             button1.TabIndex = 13;
             button1.Text = "Score";
             button1.UseVisualStyleBackColor = true;
