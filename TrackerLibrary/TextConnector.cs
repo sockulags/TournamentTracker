@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary
 {
-    public class SqlConnector : IDataConnection
+    public class TextConnector : IDataConnection
     {
-        // TODO - Make the Create Prize method actually save to the database.
+        // TODO - Wire up the CreatePrize for text files.
         /// <summary>
-        /// Saves a new prize to the database.
+        /// Saves the created prize to a text file.
         /// </summary>
-        /// <param name="model">The prize information.</param>
-        /// <returns>The prize information, including the unique identifier.</returns>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
             model.Id = 1;

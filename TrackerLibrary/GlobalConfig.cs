@@ -11,7 +11,7 @@ namespace TrackerLibrary
         /// <summary>
         /// Could be one or more data sources to pull from. Therefore it's a list.
         /// </summary>
-        public static List<IDataConnection> Connections { get; private set; }
+        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
         /// <summary>
         /// 
         /// </summary>
@@ -21,12 +21,16 @@ namespace TrackerLibrary
         {
             if (database)
             {
-                // TODO - Create the SQL connection
+                // TODO - Set up the SQL Connector properly
+                SqlConnector sql = new SqlConnector();
+                Connections.Add(sql);
             }
 
             if(textFiles)
             {
-                // TODO - Create the Text Connection
+                // TODO - Set up the Text connector properly
+                TextConnector text = new TextConnector();
+                Connections.Add(text);
             }
         }
     }

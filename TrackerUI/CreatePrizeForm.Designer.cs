@@ -58,7 +58,6 @@
             placeNumberValue.Name = "placeNumberValue";
             placeNumberValue.Size = new Size(206, 43);
             placeNumberValue.TabIndex = 14;
-            placeNumberValue.TextChanged += placeNumberValue_TextChanged;
             // 
             // placeNumberLabel
             // 
@@ -84,7 +83,6 @@
             placeNameLabel.Size = new Size(157, 37);
             placeNameLabel.TabIndex = 15;
             placeNameLabel.Text = "Place Name";
-            placeNameLabel.Click += label1_Click;
             // 
             // prizeAmountValue
             // 
@@ -92,6 +90,7 @@
             prizeAmountValue.Name = "prizeAmountValue";
             prizeAmountValue.Size = new Size(206, 43);
             prizeAmountValue.TabIndex = 18;
+            prizeAmountValue.Text = "0";
             // 
             // prizeAmountLabel
             // 
@@ -108,6 +107,7 @@
             prizePercentageValue.Name = "prizePercentageValue";
             prizePercentageValue.Size = new Size(206, 43);
             prizePercentageValue.TabIndex = 20;
+            prizePercentageValue.Text = "0";
             // 
             // pricePercentageLabel
             // 
@@ -142,6 +142,7 @@
             createPrizeButton.TabIndex = 26;
             createPrizeButton.Text = "Create Prize";
             createPrizeButton.UseVisualStyleBackColor = true;
+            createPrizeButton.Click += createPrizeButton_Click;
             // 
             // CreatePrizeForm
             // 
@@ -165,7 +166,6 @@
             Margin = new Padding(6, 7, 6, 7);
             Name = "CreatePrizeForm";
             Text = "Create Prize";
-            Load += CreatePrizeForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
