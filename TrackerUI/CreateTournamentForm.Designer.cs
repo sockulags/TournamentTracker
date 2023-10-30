@@ -42,9 +42,9 @@
             tournamentPlayerListBox = new ListBox();
             deleteSelectedPlayerButton = new Button();
             deleteSelectedPrizeButton = new Button();
-            prizezListBox = new ListBox();
+            prizesListBox = new ListBox();
             prizesLabel = new Label();
-            button1 = new Button();
+            createTournamentButton = new Button();
             SuspendLayout();
             // 
             // createTournamentHeadLabel
@@ -198,14 +198,14 @@
             deleteSelectedPrizeButton.Text = "Delete Selected";
             deleteSelectedPrizeButton.UseVisualStyleBackColor = true;
             // 
-            // prizezListBox
+            // prizesListBox
             // 
-            prizezListBox.FormattingEnabled = true;
-            prizezListBox.ItemHeight = 37;
-            prizezListBox.Location = new Point(420, 394);
-            prizezListBox.Name = "prizezListBox";
-            prizezListBox.Size = new Size(375, 189);
-            prizezListBox.TabIndex = 22;
+            prizesListBox.FormattingEnabled = true;
+            prizesListBox.ItemHeight = 37;
+            prizesListBox.Location = new Point(420, 394);
+            prizesListBox.Name = "prizesListBox";
+            prizesListBox.Size = new Size(375, 189);
+            prizesListBox.TabIndex = 22;
             // 
             // prizesLabel
             // 
@@ -218,20 +218,20 @@
             prizesLabel.Text = "Teams / Players";
             prizesLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // createTournamentButton
             // 
-            button1.FlatAppearance.BorderColor = Color.Silver;
-            button1.FlatAppearance.MouseDownBackColor = Color.DarkGray;
-            button1.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(311, 612);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(307, 77);
-            button1.TabIndex = 24;
-            button1.Text = "Create Tournament";
-            button1.UseVisualStyleBackColor = true;
+            createTournamentButton.FlatAppearance.BorderColor = Color.Silver;
+            createTournamentButton.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+            createTournamentButton.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
+            createTournamentButton.FlatStyle = FlatStyle.Flat;
+            createTournamentButton.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            createTournamentButton.Location = new Point(311, 612);
+            createTournamentButton.Margin = new Padding(2);
+            createTournamentButton.Name = "createTournamentButton";
+            createTournamentButton.Size = new Size(307, 77);
+            createTournamentButton.TabIndex = 24;
+            createTournamentButton.Text = "Create Tournament";
+            createTournamentButton.UseVisualStyleBackColor = true;
             // 
             // CreateTournamentForm
             // 
@@ -239,9 +239,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(987, 727);
-            Controls.Add(button1);
+            Controls.Add(createTournamentButton);
             Controls.Add(deleteSelectedPrizeButton);
-            Controls.Add(prizezListBox);
+            Controls.Add(prizesListBox);
             Controls.Add(prizesLabel);
             Controls.Add(deleteSelectedPlayerButton);
             Controls.Add(tournamentPlayerListBox);
@@ -281,8 +281,8 @@
         private ListBox tournamentPlayerListBox;
         private Button deleteSelectedPlayerButton;
         private Button deleteSelectedPrizeButton;
-        private ListBox prizezListBox;
+        private ListBox prizesListBox;
         private Label prizesLabel;
-        private Button button1;
+        private Button createTournamentButton;
     }
 }
