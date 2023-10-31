@@ -1,37 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrackerLibrary.DataAccess;
 
 namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
-        /// <summary>
-        /// Could be one or more data sources to pull from. Therefore it's a list.
-        /// </summary>
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="database">True if database is a source.</param>
-        /// <param name="textFiles">True if text file is a source.</param>
-        public static void InitializeConnection(bool database, bool textFiles)
+    
+        public static IDataConnection Connection { get; private set; } 
+
+        public static void InitializeConnection(DatabaseType db)
         {
-            if (database)
+            if (db == DatabaseType.Sql)
             {
                 // TODO - Set up the SQL Connector properly
                 SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                Connection = sql;
             }
 
-            if(textFiles)
+            else if(db == DatabaseType.TextFile)
             {
                 // TODO - Set up the Text connector properly
                 TextConnector text = new TextConnector();
-                Connections.Add(text);
+                Connection = text;
             }
+        }
+
+        public static string ConnString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
