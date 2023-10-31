@@ -32,7 +32,7 @@ namespace TrackerUI
                     prizePercentageValue.Text
                     );
 
-                GlobalConfig.Connection.CreatePrize( model );
+                GlobalConfig.Connection.CreatePrize(model);
 
                 placeNameValue.Text = "";
                 placeNumberValue.Text = "";
@@ -89,5 +89,7 @@ namespace TrackerUI
 
             return output;
         }
+
+       
     }
 }

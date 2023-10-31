@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
+using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
@@ -17,19 +19,50 @@ namespace TrackerUI
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void createMemberButton_Click(object sender, EventArgs e)
         {
+            if (ValidateForm())
+            {
+                PersonModel p = new PersonModel() { 
+                FirstName = firstNameValue.Text,
+                LastName = lastNameValue.Text,
+                EmailAddress = emailValue.Text,
+                PhoneNumber = cellphoneValue.Text};
 
+                GlobalConfig.Connection.CreatePerson(p);
+
+                firstNameValue.Text = "";
+                lastNameValue.Text = "";
+                emailValue.Text = "";
+                cellphoneValue.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("You need to fill in all the fields.");
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private bool ValidateForm()
         {
+            if(firstNameValue.Text.Length == 0)
+            {
+                return false;
+            }
+            if(lastNameValue.Text.Length == 0)
+            { return false; }
 
-        }
+            if(emailValue.Text.Length == 0)
+            {
+                // TODO - Proper email validation.
+                return false;
+            }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            if(cellphoneValue.Text.Length == 0)
+            {
+                // TODO - Proper phone number validation for a swedish number.
+                return false;
+            }
+            return true;
         }
     }
 }
