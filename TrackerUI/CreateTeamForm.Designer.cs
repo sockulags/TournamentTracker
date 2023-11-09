@@ -52,10 +52,11 @@
             // 
             // teamNameValue
             // 
+            teamNameValue.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             teamNameValue.ForeColor = SystemColors.HotTrack;
             teamNameValue.Location = new Point(36, 111);
             teamNameValue.Name = "teamNameValue";
-            teamNameValue.Size = new Size(368, 43);
+            teamNameValue.Size = new Size(368, 36);
             teamNameValue.TabIndex = 13;
             // 
             // teamNameLabel
@@ -95,14 +96,16 @@
             addMemberButton.TabIndex = 19;
             addMemberButton.Text = "Add Member";
             addMemberButton.UseVisualStyleBackColor = true;
+            addMemberButton.Click += addMemberButton_Click;
             // 
             // selectTeamMemberDropDown
             // 
+            selectTeamMemberDropDown.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             selectTeamMemberDropDown.ForeColor = SystemColors.HotTrack;
             selectTeamMemberDropDown.FormattingEnabled = true;
             selectTeamMemberDropDown.Location = new Point(36, 195);
             selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
-            selectTeamMemberDropDown.Size = new Size(368, 45);
+            selectTeamMemberDropDown.Size = new Size(368, 38);
             selectTeamMemberDropDown.TabIndex = 18;
             // 
             // selectTeamMemberLabel
@@ -134,7 +137,6 @@
             groupBox1.TabIndex = 20;
             groupBox1.TabStop = false;
             groupBox1.Text = "Add New Member";
-            
             // 
             // createMemberButton
             // 
@@ -168,7 +170,6 @@
             cellphoneLabel.Size = new Size(111, 30);
             cellphoneLabel.TabIndex = 15;
             cellphoneLabel.Text = "Cellphone";
-         
             // 
             // emailValue
             // 
@@ -187,7 +188,6 @@
             emailLabel.Size = new Size(64, 30);
             emailLabel.TabIndex = 13;
             emailLabel.Text = "Email";
-            
             // 
             // lastNameValue
             // 

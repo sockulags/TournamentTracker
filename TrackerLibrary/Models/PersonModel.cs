@@ -28,5 +28,13 @@ namespace TrackerLibrary.Models
         /// Competing persons phone number.
         /// </summary>
         public string PhoneNumber { get; set; }
+
+        public string FullName 
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
     }
 }

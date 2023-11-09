@@ -27,6 +27,8 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             return $"{ConfigurationManager.AppSettings["filePath"]}\\{fileName}";
         }
 
+      
+
         public static List<string> LoadFile(this string file)
         {
             if(!File.Exists(file))
